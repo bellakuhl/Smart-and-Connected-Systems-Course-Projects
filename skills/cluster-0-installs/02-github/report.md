@@ -1,20 +1,10 @@
 #  Skill Name
 
-Author: FirstName LastName, YYYY-MM-DD
+Author: Isabella Kuhl, 2019-09-03
 
 ## Summary
-
+I set up my repo and cloned it to my laptop
 
 ## Sketches and Photos
-
-
-## Modules, Tools, Source Used in Solution
-
-
-## Supporting Artifacts
-
-
------
-
-## Reminders
-- Repo is private
+Here is a picture of me commiting to Github
+![Skill 1](https://github.com/bellakuhl/Kuhl-Isabella/blob/master/skill1.jpg "First commit")

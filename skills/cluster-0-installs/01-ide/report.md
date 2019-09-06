@@ -1,20 +1,6 @@
 #  Skill Name
 
-Author: FirstName LastName, YYYY-MM-DD
+Author: Isabella Kuhl, 2019-09-3
 
 ## Summary
-
-
-## Sketches and Photos
-
-
-## Modules, Tools, Source Used in Solution
-
-
-## Supporting Artifacts
-
-
------
-
-## Reminders
-- Repo is private
+I downloaded and setup my chosen IDE which is Atom

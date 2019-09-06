@@ -1,20 +1,6 @@
 #  Skill Name
 
-Author: FirstName LastName, YYYY-MM-DD
+Author: Isabella Kuhl, 2019-09-03
 
 ## Summary
-
-
-## Sketches and Photos
-
-
-## Modules, Tools, Source Used in Solution
-
-
-## Supporting Artifacts
-
-
------
-
-## Reminders
-- Repo is private
+I connected on Piazza and added my name, major, and github username.
