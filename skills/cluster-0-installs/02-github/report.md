@@ -1,4 +1,4 @@
-#  Skill Name
+#  Setup and Use Github Individually
 
 Author: Isabella Kuhl, 2019-09-03
 
@@ -6,5 +6,5 @@ Author: Isabella Kuhl, 2019-09-03
 I set up my repo and cloned it to my laptop
 
 ## Sketches and Photos
-Here is a picture of me commiting to Github
-![Skill 1](https://github.com/bellakuhl/Kuhl-Isabella/blob/master/skill1.jpg "First commit")
+Here is a picture of me committing to Github
+![Skill 2](https://github.com/BU-EC444/Kuhl-Isabella/blob/master/skills/cluster-0-installs/02-github/images/skill2.jpg)
