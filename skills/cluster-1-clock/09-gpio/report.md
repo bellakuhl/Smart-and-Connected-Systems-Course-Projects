@@ -10,5 +10,5 @@ Here is an image of 14 in binary running on the ESP32:
 ![skill09](https://github.com/BU-EC444/Kuhl-Isabella/blob/master/skills/cluster-1-clock/09-gpio/images/skill09.jpg)
 
 ## Modules, Tools, Source Used in Solution
-Huzzah image of ESP32 pinout was used for reference
-Hello_world example code template was used as a shell for the program I wrote
+1. [Huzzah image](https://cdn-learn.adafruit.com/downloads/pdf/adafruit-huzzah32-esp32-feather.pdf) of ESP32 pinout was used for reference
+2. Hello_world example code template was used as a shell for the program I wrote
