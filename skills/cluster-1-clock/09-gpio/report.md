@@ -7,7 +7,7 @@ In this skill I used Atom to write a program that counts up to 15 in binary usin
 
 ## Sketches and Photos
 Here is an image of 14 in binary running on the ESP32:
-[!(https://github.com/BU-EC444/Kuhl-Isabella/blob/master/skills/cluster-1-clock/09-gpio/images/skill09.jpg)]
+![skill09](https://github.com/BU-EC444/Kuhl-Isabella/blob/master/skills/cluster-1-clock/09-gpio/images/skill09.jpg)
 
 ## Modules, Tools, Source Used in Solution
 Huzzah image of ESP32 pinout was used for reference
