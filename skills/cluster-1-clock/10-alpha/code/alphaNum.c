@@ -297,14 +297,15 @@ static void test_alpha_display() {
     while (1) {
 			char disp[8];
 			gets(disp);
-			printf("%d\n",(int)disp[0]);
-			printf("%c\n",disp[0]);
 
 			int size = strlen(disp);
 			if (size <= 4) {
 				int n;
 				for (n = 0; n < size; n++) {
 					displaybuffer[n] = alphafonttable[(int)disp[n]];
+				}
+				for (n = 0; n < (4 - size); n++) {
+					displaybuffer[n + size] = 0b0000000000000000;
 				}
 			}
 			vTaskDelay(50 / portTICK_RATE_MS);
@@ -321,13 +322,7 @@ static void test_alpha_display() {
       ret = i2c_master_cmd_begin(I2C_EXAMPLE_MASTER_NUM, cmd4, 1000 / portTICK_RATE_MS);
       i2c_cmd_link_delete(cmd4);
 
-      // for (int i = 0; i < 8; i++) {
-      //     printf("%04x\n", displaybuffer[i]);
-      // }
 
-      if(ret == ESP_OK) {
-        printf("- wrote: T.D.C.L. \n\n");
-      }
     }
 
 }
