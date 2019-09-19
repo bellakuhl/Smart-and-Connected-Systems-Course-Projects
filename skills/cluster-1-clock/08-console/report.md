@@ -8,3 +8,6 @@ In this skill I implemented a program that has three modes. The first mode, togg
 ## Sketches and Photos
 Here is an image of the console read-out when the program is running:
 ![skill9](https://github.com/BU-EC444/Kuhl-Isabella/blob/master/skills/cluster-1-clock/08-console/images/skill9.PNG)
+
+## Modules, Tools, Source Used in Solution
+I used [Emily Lam's](http://whizzer.bu.edu/briefs/design-patterns/dp-console) UART code to initialize the console I/O.
