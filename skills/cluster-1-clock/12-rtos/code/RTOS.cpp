@@ -171,6 +171,10 @@ int set_brightness_max(uint8_t val) {
 
 void init() {
 
+
+  // init alphanumeric display
+  i2c_example_master_init();
+  i2c_scanner();
   // Debug
   printf(">> Test Alphanumeric Display: \n");
 
@@ -184,9 +188,6 @@ void init() {
   ret = set_brightness_max(0xF);
   if(ret == ESP_OK) {printf("- brightness: max \n");}
 
-  // init alphanumeric display
-  i2c_example_master_init();
-  i2c_scanner();
   // init LEDs and binary vectors
   gpio_pad_select_gpio(BLUE);
   gpio_pad_select_gpio(YELLOW);
@@ -200,34 +201,51 @@ void init() {
   gpio_set_direction(GREEN, GPIO_MODE_OUTPUT);
 
   gpio_set_direction(BUTTON, GPIO_MODE_INPUT);
+  gpio_set_intr_type(BUTTON, GPIO_INTR_ANYEDGE);
 }
 
 	static void binary(void *arg)         // task 1
 	{
     while(1) {
-      for (int i = 0; i <= 15; i++) {
-          int *num = nums[i];
-          gpio_set_level(BLUE, num[0]);
-          gpio_set_level(YELLOW, num[1]);
-          gpio_set_level(RED, num[2]);
-          gpio_set_level(GREEN, num[3]);
-          vTaskDelay(100);
+      if (dir == 1) {
+        for (int i = 0; i <= 15; i++) {
+            int *num = nums[i];
+            gpio_set_level(BLUE, num[0]);
+            gpio_set_level(YELLOW, num[1]);
+            gpio_set_level(RED, num[2]);
+            gpio_set_level(GREEN, num[3]);
+            vTaskDelay(100);
+          }
         }
+      else {
+        for (int i = 15; i >= 0; i--) {
+            int *num = nums[i];
+            gpio_set_level(BLUE, num[0]);
+            gpio_set_level(YELLOW, num[1]);
+            gpio_set_level(RED, num[2]);
+            gpio_set_level(GREEN, num[3]);
+            vTaskDelay(100);
+          }
       }
+      vTaskDelay(50 / portTICK_RATE_MS);
+    }
 	}
 
 	static void button_press(void *arg)			// task 2
 	{
 		while(1){
-			if (dir == true) {dir = false;}
-      else {dir = true;}
+      int press = gpio_get_level(BUTTON);
+      if (press == 0){    // Button always 1 until pressed
+        if (dir == true) {dir = false;}
+        else {dir = true;}
+      }
+      vTaskDelay(50 / portTICK_RATE_MS);
 		}
 	}
 
   static void alpha(void *arg)			// task 3
   {
     while (1) {
-
 			if (dir == true) {
 					displaybuffer[0] = 0b0000000000111110;
           displaybuffer[1] = 0b0000000011110011;
@@ -260,7 +278,7 @@ void init() {
 	void app_main()
 	{
 		init();				// Initialize stuff
-		xTaskCreate(binary, "binary",1024*2, NULL, configMAX_PRIORITIES-1, NULL);
+		xTaskCreate(binary, "binary",1024*2, NULL, configMAX_PRIORITIES-2, NULL);
 		xTaskCreate(button_press, "button_press",1024*2, NULL, configMAX_PRIORITIES, NULL);
-    xTaskCreate(alpha, "alpha",1024*2, NULL, configMAX_PRIORITIES-2, NULL);
+    xTaskCreate(alpha, "alpha",1024*2, NULL, configMAX_PRIORITIES-1, NULL);
 	}
