@@ -7,6 +7,7 @@ In this skill I created a program that receives an input voltage into the ADC an
 
 ## Sketches and Photos
 Here is an image of the program running:
+![skill15](https://github.com/BU-EC444/Kuhl-Isabella/blob/master/skills/cluster-2-sensor/15-battery/images/skill13.jpg)
 
 ## Modules, Tools, Source Used in Solution
 1. I used Espressif [ADC example](https://github.com/espressif/esp-idf/blob/39f090a4f1dee4e325f8109d880bf3627034d839/examples/peripherals/adc/main/adc1_example_main.c) code and adapted it to display the values.
