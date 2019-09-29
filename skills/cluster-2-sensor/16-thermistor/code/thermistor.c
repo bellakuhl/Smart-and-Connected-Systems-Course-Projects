@@ -16,11 +16,11 @@ is then displayed on a alphanumeric display*/
 #include "math.h"
 
 #define DEFAULT_VREF          1100        //Use adc2_vref_to_gpio() to obtain a better estimate
-#define NO_OF_SAMPLES         5          //Multisampling
+#define NO_OF_SAMPLES         5          // Multisampling
 #define RESISTOR              10000      // Resistor in voltage divider
 #define BCOEFFICIENT          3435        // B value for thermistor used in Steinhart eqn
-#define ROOMTEMP              298.15      // Room temp in Kelvin
-#define ROOMTEMP_RESISTANCE   10000       // Room temp resistance of thermistor
+#define ROOMTEMP              273.15      // Freezing temp in Kelvin
+#define FREEZING_RESISTANCE   45000       // Freezing temp resistance of thermistor
 
 static esp_adc_cal_characteristics_t *adc_chars;
 static const adc_channel_t channel = ADC_CHANNEL_6;     //GPIO34 if ADC1, GPIO14 if ADC2
@@ -96,17 +96,17 @@ void app_main(void)
         }
         adc_reading /= NO_OF_SAMPLES;
         double resistance = calculate_R(adc_reading);
-        float kelvin_temp = log(resistance/ROOMTEMP_RESISTANCE);
+        double kelvin_temp = log(resistance/FREEZING_RESISTANCE);
         kelvin_temp = kelvin_temp * (1.0 / BCOEFFICIENT);
         kelvin_temp += (1.0 / ROOMTEMP);                       // Steinhart eqn
         kelvin_temp = 1.0 / kelvin_temp;
 
-        float cels_temp = kelvin_temp - 273.15;
+        double cels_temp = kelvin_temp - 273.15;
 
         // print to display
         char buffer[50];
         sprintf(buffer, "%f", cels_temp);
-        uint32_t voltage = esp_adc_cal_raw_to_voltage(adc_reading, adc_chars);
+
         for (int e = 0; e < 4; e++) {
           alphadisplay_write_ascii(e, buffer[e]);
         }
