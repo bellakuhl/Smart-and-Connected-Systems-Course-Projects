@@ -1,3 +1,4 @@
 # Code Readme
 
-Brief explanation on how to navigate your code folder. For example, main consists of the entry function, and lib are where the resource libraries are located.
+* battery_monitor.c receives no input, just runs and displays voltage on alphanumeric display and on console.
+* Codes assumes port A2 is the ADC and uses two 1k resistors as a voltage divider.
