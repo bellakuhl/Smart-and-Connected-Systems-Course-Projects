@@ -13,6 +13,7 @@ Here is an image of one of the demo modules from W3schools running:
 -----------------------------------------------------------------------
 
 Here is an image of the program running:
+
 ![install node](https://github.com/BU-EC444/Kuhl-Isabella/blob/master/skills/cluster-2-sensor/19-nodejs/images/skill19a.PNG)
 
 ## Modules, Tools, Source Used in Solution
