@@ -1,3 +1,7 @@
+/* Isabella Kuhl 10/07/19
+This program reads in a text file with data separated by commas and creates a series
+on a chart with that data. The file I use is stock data from FB, APL, MSFT, and GOOGL.
+The chart template is from CanvasJS */
 
 window.onload = function() {
         var dataPoints0 = [];
