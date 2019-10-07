@@ -1,3 +1,4 @@
 # Code Readme
 
-Brief explanation on how to navigate your code folder. For example, main consists of the entry function, and lib are where the resource libraries are located.
+* Visuals.js reads and parses the text file data and then creates a chart to display the data on.
+* chart.html is the html file that creates the page for the chart.
