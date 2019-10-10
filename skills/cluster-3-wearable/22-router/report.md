@@ -7,6 +7,13 @@ In this skill we reflashed and setup our WRT54GL router using the latest Tomato 
 
 ## Sketches and Photos
 
+Here is an image of the time being set in settings:
+
+![set time](https://github.com/BU-EC444/Kuhl-Isabella/blob/master/skills/cluster-3-wearable/22-router/images/setTime.png)
+
+Here is an image of setting the SSID and password:
+
+![SSID](https://github.com/BU-EC444/Kuhl-Isabella/blob/master/skills/cluster-3-wearable/22-router/images/SSID.png)
 
 ## Modules, Tools, Source Used in Solution
 
