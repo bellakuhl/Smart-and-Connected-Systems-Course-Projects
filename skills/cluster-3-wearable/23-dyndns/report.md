@@ -9,20 +9,22 @@ In this skill we set up a DNS so that we are able to change the location of the 
 
 Here is an image of the DNS setup:
 
-![]()
+![DNS](https://github.com/BU-EC444/Kuhl-Isabella/blob/master/skills/cluster-3-wearable/23-dyndns/images/DNS.png)
 
 Here is an image of the domain displaying text on a computer and a phone:
 
-![]()
+![computer](https://github.com/BU-EC444/Kuhl-Isabella/blob/master/skills/cluster-3-wearable/23-dyndns/images/domain.png)
 
-![]()
+![mobile](https://github.com/BU-EC444/Kuhl-Isabella/blob/master/skills/cluster-3-wearable/23-dyndns/images/mobileTest.png)
+
+Here is an image of port forwarding configuration:
+
+![port forwarding](https://github.com/BU-EC444/Kuhl-Isabella/blob/master/skills/cluster-3-wearable/23-dyndns/images/portForwarding.png)
 
 
 ## Modules, Tools, Source Used in Solution
 
-
-## Supporting Artifacts
-
+* We used [namecheap](https://www.namecheap.com/) to register a domain name for our server.
 
 -----
 
