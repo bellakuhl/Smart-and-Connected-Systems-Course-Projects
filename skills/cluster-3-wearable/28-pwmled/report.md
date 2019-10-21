@@ -9,7 +9,7 @@ In this skill I controlled the brightness of an LED using the PWM pins on the ES
 
 Here is an image of the console output for the user inputted intensity:
 
-![console]()
+![console](https://github.com/BU-EC444/Kuhl-Isabella/blob/master/skills/cluster-3-wearable/28-pwmled/images/user_control_console.PNG)
 
 I recorded the execution of each program - [this]() is the link for user_controls_PWM.c and [this]() is the link for intensity_cycle.c.
 
