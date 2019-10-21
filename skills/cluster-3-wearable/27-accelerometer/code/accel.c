@@ -108,6 +108,7 @@ int writeRegister(uint8_t reg, uint8_t data) {
     i2c_cmd_handle_t cmd = i2c_cmd_link_create();
     i2c_master_start(cmd);
     i2c_master_write_byte(cmd, (SLAVE_ADDR << 1) | I2C_MASTER_WRITE, ACK_CHECK_EN);
+    i2c_master_write_byte(cmd, reg, ACK_CHECK_EN);
     i2c_master_write_byte(cmd, data, ACK_CHECK_DIS);
     i2c_master_stop(cmd);
     ret = i2c_master_cmd_begin(I2C_EXAMPLE_MASTER_NUM, cmd, 1000 / portTICK_RATE_MS);
@@ -176,7 +177,7 @@ void getAccel(float * xp, float *yp, float *zp) {
   *xp = read16(ADXL343_REG_DATAX0) * ADXL343_MG2G_MULTIPLIER * SENSORS_GRAVITY_STANDARD;
   *yp = read16(ADXL343_REG_DATAY0) * ADXL343_MG2G_MULTIPLIER * SENSORS_GRAVITY_STANDARD;
   *zp = read16(ADXL343_REG_DATAZ0) * ADXL343_MG2G_MULTIPLIER * SENSORS_GRAVITY_STANDARD;
-   //printf("X: %.2f \t Y: %.2f \t Z: %.2f\n", *xp, *yp, *zp);
+  printf("X: %.2f \t Y: %.2f \t Z: %.2f\n", *xp, *yp, *zp);
 }
 
 // function to print roll and pitch
