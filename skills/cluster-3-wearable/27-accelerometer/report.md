@@ -7,9 +7,7 @@ In this skill, my team and I wrote a program to read in and interpret values fro
 
 ## Sketches and Photos
 
-Here is an image of the values read by the accelerometer:
-
-[accel]()
+I recorded a video to demonstrate this program which can be found [here](https://drive.google.com/open?id=1Jt-C7W9UYSNjbAQrVCxR-uK05-v0gRHW).
 
 ## Modules, Tools, Source Used in Solution
 
