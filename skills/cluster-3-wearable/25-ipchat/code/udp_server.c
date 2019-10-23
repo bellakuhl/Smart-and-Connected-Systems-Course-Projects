@@ -1,10 +1,8 @@
-/* BSD Socket API Example
-
-   This example code is in the Public Domain (or CC0 licensed, at your option.)
-
-   Unless required by applicable law or agreed to in writing, this
-   software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
-   CONDITIONS OF ANY KIND, either express or implied.
+/*
+*   Isabella Kuhl 10/23/19
+*   Adapted from BSD Socket API Example
+*   Sends UDP packets to PC client
+*
 */
 #include <string.h>
 #include <sys/param.h>
