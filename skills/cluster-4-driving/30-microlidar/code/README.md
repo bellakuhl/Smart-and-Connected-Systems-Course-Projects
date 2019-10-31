@@ -1,3 +1,10 @@
-# Code Readme
+# Micro LIDAR
 
-Brief explanation on how to navigate your code folder. For example, main consists of the entry function, and lib are where the resource libraries are located.
+Connect the Micro LIDAR's TX pin to the RX pin on
+the Huzzah32. Then from this folder: 
+
+```
+idf.py flash monitor
+```
+
+
