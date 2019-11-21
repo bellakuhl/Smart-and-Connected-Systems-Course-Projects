@@ -1,0 +1,14 @@
+{
+  "name": "ec444-databases",
+  "version": "1.0.0",
+  "description": "Brief explanation on how to navigate your code folder. For example, main consists of the entry function, and lib are where the resource libraries are located.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tingodb": "^0.6.1"
+  }
+}
